@@ -1,0 +1,2 @@
+FLASK_APP=colleen_and_tim.py
+FLASK_DEBUG=1
