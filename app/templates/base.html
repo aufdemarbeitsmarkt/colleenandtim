@@ -2,6 +2,7 @@
 <html>
     <head>
         <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     </head>
     
     <style>
@@ -15,16 +16,73 @@
         }
         body {
             font-family: 'EB Garamond';font-size: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;           
+        }
+        menu {
+            width: 50vw;
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;           
+            padding: 0;
+        }
+        menu li {
+            display: flex;
+            width: 100%;
+            list-style: none;            
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 5px;
+            height: 40px;
+            box-sizing: border-box;
+        }
+        menu li a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            padding: 0 5px 0 5px;
+            cursor: pointer;
+        }
+        main, header {
+            flex: 1 1 0;
+            display: flex;           
+        }
+        header {
+            width: 100vw;
+            border-bottom: 1px solid black;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            /* larger than a tablet */
+            menu {               
+                width: 75vw;
+                flex-direction: row;          
+            }
+            menu li a {
+                justify-content: center;
+            }
+  
         }
     </style>
     <body>
+        <header>
+        <menu>
+            <li><a href="/index"><b>Colleen & Tim</b></a> </li>
+            <li><a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSemogBKzXdQY_Fqs1qWKFdHsF8xXKbHdQHysf5EXWlSwQ9zdw/viewform">RSVP</a>
+            </li>
+            <li><a href="https://www.myregistry.com/giftlist/colleen-and-tim">Registry</a> </li>
+            <li><a href="/index">Info</a> </li>
 
-        <div><a href="/index"><b>Colleen & Tim</b></a> </div>
-        <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSemogBKzXdQY_Fqs1qWKFdHsF8xXKbHdQHysf5EXWlSwQ9zdw/viewform">RSVP</a> </div>
-        <div><a href="https://www.myregistry.com/giftlist/colleen-and-tim">Registry</a> </div>
-        <div><a href="/index">Info</a> </div>
-
-        <hr>
+        </menu>
+        </header>
         {% block content %}{% endblock %}
     </body>
 </html>
