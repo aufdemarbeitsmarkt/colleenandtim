@@ -6,12 +6,14 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Colleen & Tim')
+    return render_template('index.html')
+
 
 @app.route('/registry')
 def registry():
     return render_template('coming_soon.html')
 
+
 @app.route('/info')
 def info():
-    return render_template('coming_soon.html')
+    return render_template('info.html')
