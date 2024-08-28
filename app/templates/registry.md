@@ -1,3 +1,0 @@
-- [Stumptown Strays](https://www.stumptownstrays.org/)
-- [Médecins Sans Frontières | Doctors Without Borders](https://donate.doctorswithoutborders.org/)
-- [Venmo](https://venmo.com/u/Tim-Nilsen)

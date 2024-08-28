@@ -11,7 +11,7 @@ def index():
 
 @app.route('/registry')
 def registry():
-    return render_template('coming_soon.html')
+    return render_template('registry.html')
 
 
 @app.route('/info')
